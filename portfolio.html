@@ -1,0 +1,394 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kasunuru Mahitha | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fefefe;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(90deg, #0077b6, #00b4d8);
+            color: white;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffd60a;
+        }
+
+        .hero {
+            background:
+                linear-gradient(rgba(0, 30, 60, 0.65),
+                rgba(0, 30, 60, 0.65)),
+                url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80")
+                center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 7rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.75rem 1.5rem;
+            background: #ffd60a;
+            color: #111;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #ffc300;
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0077b6;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .about p {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            font-size: 1.1rem;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .skill {
+            background: #e0f7fa;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            color: #0077b6;
+            font-weight: bold;
+            box-shadow: 0 2px 5px #00000015;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            padding: 1.5rem;
+            background: #f0faff;
+            border-radius: 10px;
+            border-left: 5px solid #00b4d8;
+            box-shadow: 0 3px 10px #00000010;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            color: #0077b6;
+            margin-bottom: 0.8rem;
+        }
+
+        .project-card p {
+            margin-bottom: 1rem;
+        }
+
+        .project-link {
+            color: #0077b6;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .contact {
+            background: #0077b6;
+            color: white;
+            max-width: 100%;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact p {
+            margin: 0.7rem 0;
+            font-size: 1.05rem;
+        }
+
+        .contact a {
+            color: #ffd60a;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            border: 2px solid white;
+            color: white;
+            text-decoration: none;
+            padding: 0.7rem 1.3rem;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #ffd60a;
+            border-color: #ffd60a;
+            color: #003049;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #023e8a;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="logo">K. Mahitha</div>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="hero" id="home">
+        <h1>Hello, I'm Kasunuru Mahitha 👋</h1>
+
+        <p>
+            A B.Tech Artificial Intelligence and Machine Learning student
+            passionate about programming, web development, and building
+            useful technology solutions.
+        </p>
+
+        <a href="#about" class="btn">Explore My Portfolio</a>
+        <a href="#contact" class="btn">Get in Touch</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+
+        <p>
+            I am pursuing my B.Tech in Artificial Intelligence and Machine
+            Learning at Mohan Babu University. I enjoy learning new
+            technologies, developing websites, and solving programming
+            problems using Python and Java. I aim to build practical,
+            user-friendly applications and continue growing as a software
+            developer.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skills">
+            <div class="skill">Python</div>
+            <div class="skill">Java</div>
+            <div class="skill">HTML5</div>
+            <div class="skill">CSS3</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Git & GitHub</div>
+            <div class="skill">Problem Solving</div>
+            <div class="skill">Prompt Engineering</div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="projects">
+
+            <div class="project-card">
+                <h3>Personal Portfolio Website</h3>
+                <p>
+                    A responsive personal website showcasing my profile,
+                    technical skills, projects, and professional contact links.
+                </p>
+                <a class="project-link"
+                   href="https://github.com/YOUR-GITHUB-USERNAME"
+                   target="_blank" rel="noopener noreferrer">
+                    View on GitHub →
+                </a>
+            </div>
+
+            <div class="project-card">
+                <h3>Student Grade Tracker System</h3>
+                <p>
+                    A student project designed to record marks, calculate
+                    grades, and organize academic performance information.
+                </p>
+                <a class="project-link"
+                   href="https://github.com/YOUR-GITHUB-USERNAME"
+                   target="_blank" rel="noopener noreferrer">
+                    View on GitHub →
+                </a>
+            </div>
+
+            <div class="project-card">
+                <h3>Adaptive Disaster Damage Assessment</h3>
+                <p>
+                    An AI-based project concept focused on assessing
+                    disaster damage from satellite images using computer
+                    vision and deep learning.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+
+        <p>Have an opportunity or project in mind? Let's connect!</p>
+
+        <p>
+            📧 Email:
+            <a href="mailto:mahithakasunuru@gmail.com">
+                mahithakasunuru@gmail.com
+            </a>
+        </p>
+
+        <!-- Replace the example profile URLs with your actual profiles -->
+        <div class="social-links">
+
+            <a href="https://github.com/YOUR-GITHUB-USERNAME"
+               target="_blank" rel="noopener noreferrer">
+                GitHub ↗
+            </a>
+
+            <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME/"
+               target="_blank" rel="noopener noreferrer">
+                LinkedIn ↗
+            </a>
+
+            <a href="mailto:mahithakasunuru@gmail.com">
+                Email Me ✉
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Kasunuru Mahitha | Built with 💙 and passion for code</p>
+    </footer>
+
+</body>
+</html>
+```
